@@ -1,0 +1,229 @@
+body{
+   font-family: 'Inter', sans-serif;
+   font-weight: 400;
+   font-size: 14px;
+   line-height: 18px;
+   color: #0A0A0A;
+}
+
+a{
+   text-decoration: none;
+   color: inherit;/*Берёт цвет, который указан у родителя*/
+}
+
+ul{
+   margin: 0;
+   padding: 0;
+   list-style: none;
+}
+
+.header{
+    background-color: #0A0A0A; /*Цвет в 16-ти ричной системе исчисления*/
+    padding: 33px 0 32px; /*padding задали исходя из размеров макета*/
+    color: #717171;
+}
+
+.container{
+   max-width: 1200px; /*Свойство максимальная ширина. Если есть место то будет 1200px, иначе размер будет такой, какой возможен на устройстве */
+   margin: 0 auto; /*0-верх,низ; auto(здесь)-лево,право, но автоматически высчитывает; (Работает, только если блоку задана фиксированная ширина!)*/
+   padding: 0 15px; /*0-верх,низ; 15-право,лево*/
+}
+
+.nav{
+   display: flex;
+   justify-content: space-between; /*Заставляет ФЛЕКС-ЭЛЕМЕНТЫ распределиться по всей ширине родителя, разделив свободное пространство поровну.*/
+   align-items: center;
+}
+
+.menu{
+   display: flex;
+   flex-grow: 1;/*flex-grow, basis - чтобы текст встал по центру(ОСОБАЯ ТЕМА)*/
+   flex-basis: 0;/*flex-grow, basis - чтобы текст встал по центру(ОСОБАЯ ТЕМА)*/
+}
+
+.phone{
+   flex-grow: 1;/*flex-grow, basis - чтобы текст встал по центру(ОСОБАЯ ТЕМА)*/
+   flex-basis: 0; /*flex-grow, basis - чтобы текст встал по центру(ОСОБАЯ ТЕМА)*/
+   text-align: right;
+   font-size: 24px;
+   line-height: 29px;
+}
+
+.menu-item{
+   padding-right: 30px; /*Отступы между словами в nav, по 30px с правой стороны*/
+}
+
+.menu-link,
+.phone{
+   font-size: 24px;/*Размеры исходя из текста в макете*/
+   line-height: 29px; /*Высота строки, чтобы текст не слипался*/
+}
+
+.headline{
+   background-color: #F5F5F7;
+   text-align: center;
+   padding: 70px 0 40px;
+}
+
+.title{
+   text-transform: uppercase; /*(Чтобы каждая буква заголовка была большая)Указывает, как использовать заглавные буквы в тексте элемента.*/
+   margin-bottom: 0 0 40px;
+   color: #490E84;
+   font-size: 64px;
+   font-weight: 700;
+   line-height: 77px;
+}
+
+.headline-img{
+   margin-bottom: 25px;
+}
+
+.headline-btn{
+   display: inline-block; /*Чтобы применялись все блочные свойства*/
+   font-weight: 700;
+   font-size: 24px;
+   line-height: 29px;
+   text-transform: uppercase; /*Указывает, как использовать заглавные буквы в тексте элемента*/
+   color: #FFFFFF;
+   padding: 22px 117px 19px;
+   background-color: #490E84;
+   border-radius: 30px;
+}
+
+.new{
+   padding: 90px 0 150px;
+}
+
+.new-title,
+.color-title{
+   margin: 0 0 50px;
+   text-transform: uppercase; /*Указывает, как использовать заглавные буквы в тексте элемента*/
+   text-align: center;
+   color: #717171;
+   font-size: 32px; 
+   line-height: 39px; 
+}
+
+.new-info{ 
+   display: flex;
+   align-items: center; /*Картинка телефона выравнивается*/
+}
+
+.new-text p{ /*"p"- обращаемся ко всем "p", находящиеся в "new-info"*/
+   max-width: 560px; /*Максимальная ширина на макете*/
+   margin: 0 0 30px;
+}
+
+.new-text b{
+   max-width: 560px;  /*Максимальная ширина на макете*/
+   font-size: 20px;
+   line-height: 26px;
+   margin: 0 0 150px;
+   display: block;
+}
+
+.images-new{
+   margin-left: 191px;
+}
+
+.color{
+   padding-bottom: 150px;
+}
+
+.color-list{
+   display: flex;
+   justify-content: space-between; /*Распределяет пространство вокруг элемента*/
+   text-align: center;
+}
+
+.color-item img{
+   margin-bottom: 20px;
+}
+
+.color-item h3{
+   font-size: 20px;
+   line-height: 26px;
+   margin: 0 0 10px;
+}
+
+.color-item p{
+   margin: 0;
+}
+
+.contacts-inner{
+   display: flex; /*Текст и картинка в поле информации встали рядом*/
+   background-color: #574B63;
+   color: #FFF;
+}
+
+.contacts-form{
+   width: 100%; /*Теперь картинка занимает 100%*/
+   padding: 140px 90px;/*padding: 140-верх,низ/90-право,лево*/
+   text-align: center;
+}
+
+.contacts-title{
+   margin: 0 0 60px; /*Расстояние в input*/
+   text-transform: uppercase; /*Указывает, как использовать заглавные буквы в тексте элемента*/
+   font-size: 32px;
+   line-height: 39px;
+   text-align: left; /*Потому что при text-align: center у 'contacts-form', мы передвинули текст "ХОЧЕШЬ IPHONE 14 PRO?" по центру вместе с кнопкой, а так по макету не нужно*/
+}
+
+.contacts-input{
+   padding: 10px 0; /*Расстояние от текста input до её строчки ввода*/
+   border: none;
+   border-bottom: 1px solid #FFF; /*Чтобы сделать строчку в input*/
+   display: block; /*В макете они друг под другом, это свойство block, чтобы занимало всю ширину*/
+   width: 100%;/*Чтобы значение display: block РАСШИРИЛОСЬ*/
+   margin-bottom: 20px;
+   background-color: #574B63; /*Меняем Фон input */
+}
+
+.contacts-input ::placeholder{ /*Задаём значинеие ИМЕННО 'PLACEHOLDER'*/
+   font-size: 14px;
+   line-height: 18px;
+   color: #FFF;
+   opacity: 0.5;
+   font-family: 'Inter', sans-serif;
+   font-weight: 400;
+}
+
+.contacts-form p{
+   opacity: 0.5;
+   text-align: center;
+   margin: 30px 0;
+}
+
+.contacts-form button{
+   border: none;
+   border-radius: 30px;
+   text-transform: uppercase;
+   color: #490E84;
+   background-color: #FFF;
+   padding: 16px 81px;
+   font-size: 14px;
+   font-weight: 400; /*Начертание шрифта(этот более жирный)*/
+}
+
+.footer{
+   background-color: #0A0A0A;
+}
+
+.footer-inner{
+   color: #717171;
+   background-color: #0A0A0A;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding: 50px 0;
+}
+
+.footer-link{
+   flex-basis: 0;
+   flex-grow: 1; /*flex-grow, basis - чтобы текст встал по центру*/
+}
+
+
+@media(max-width: 1000px){
+}
